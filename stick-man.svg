@@ -7,23 +7,41 @@
     <circle cx="150" cy="100" r="80" fill="darkGreen"/>
     <circle cx="130" cy="100" r="10" fill="lightGreen"/>
     <circle cx="125" cy="100" r="4" fill="rgb(0, 60, 0)">
-         <animateTransform id="eyes-1"
-                           attributeName="transform"
-                           attributeType="XML"
-                           type="translate"
-                           values="0; 10; 0"
-                           begin="1s; eyes-1.end + 1s"
-                           dur="500ms"/>
+        <animate id="leftEye1"
+                 attributeName="cx"
+                 attributeType="XML"
+                 from="125"
+                 to="135"
+                 dur="200ms"
+                 begin="1s; leftEye2.end + 1.5s"
+                 fill="freeze"/>
+        <animate id="leftEye2"
+                 attributeName="cx"
+                 attributeType="XML"
+                 from="135"
+                 to="125"
+                 dur="200ms"
+                 begin="leftEye1.end + 1.5s"
+                 fill="freeze"/>
     </circle>
     <circle cx="170" cy="100" r="10" fill="lightGreen"/>
     <circle cx="165" cy="100" r="4" fill="rgb(0, 60, 0)">
-         <animateTransform id="eyes-2"
-                           attributeName="transform"
-                           attributeType="XML"
-                           type="translate"
-                           values="0; 10; 0"
-                           begin="1s; eyes-2.end + 1s"
-                           dur="500ms"/>
+        <animate id="rightEye1"
+                 attributeName="cx"
+                 attributeType="XML"
+                 from="165"
+                 to="175"
+                 dur="200ms"
+                 begin="1s; rightEye2.end + 1.5s"
+                 fill="freeze"/>
+        <animate id="rightEye2"
+                 attributeName="cx"
+                 attributeType="XML"
+                 from="175"
+                 to="165"
+                 dur="200ms"
+                 begin="rightEye1.end + 1.5s"
+                 fill="freeze"/>
     </circle>
     <!-- Mouth -->
     <rect x="120" y="140" width="60" height="20"
